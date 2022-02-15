@@ -1,0 +1,47 @@
+        </textarea>
+      </div>
+      <div class="step full-stretch">
+        <h3><span>③</span> Adjust your gallery like a boss.</h3>
+        <table>
+          <tr>
+            <th>Images per Row</th>
+            <th>Spacing</th>
+          </tr>
+          <tr>
+            <td>
+              <input id="adjustor" type="range" min="1" max="20" step="1" value="6" />
+              <span id="adjustor-display"></span>
+            </td>
+            <td>
+              <label>
+                <input id="spacor" type="checkbox" name="spacor" value="1" checked>Add a space between the images
+              </label>
+            </td>
+          </tr>
+        </table>
+        <div id="readme">
+          <h3>README.md</h3>
+          <article>
+            <h1>Your Project</h1>
+            <p id="preview"></p>
+            <p>This is a preview of how the gallery will look in your repo's readme. Of course you can add multiple image galleries and separate them with text. Images that have the same aspect ratio will look better than images with different proportions.</p>
+          </article>
+        </div>
+      </div>
+      <div class="step full-stretch">
+        <h3><span>④</span>  Now grab yer code and get outta here.</h3>
+        Click into the textarea below to select the code. Then copy'n'paste it into your project's readme.md and you are good!
+        By the way, you can also paste it into issues, that will work too!
+        <textarea id="output"></textarea>
+      </div>
+    </div>
+    <footer>
+      <div class="page">
+        <iframe src="https://ghbtns.com/github-btn.html?user=felixhayashi&repo=ReadmeGalleryCreatorForGitHub&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
+        <span>
+          Created by <a href="https://github.com/felixhayashi">@felixhayashi</a>. Free of any charge. Enjoy :)
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
