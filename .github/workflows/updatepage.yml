@@ -1,0 +1,38 @@
+name: show-figures
+
+on:
+  push:
+    paths:
+      - .github/workflows/updatepage.yml
+      - updatepage.sh
+      - img/*
+      
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: create index html
+      run: |
+        bash showfigures.sh
+
+    - name: pull-request
+      uses: repo-sync/pull-request@v2
+      with:
+        destination_branch: "main"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: commit
+      run: |
+        git config --global user.email jh2259@mrc-cu.cam.ac.uk
+        git config --global user.name xihajun
+        git add .
+        git commit -m "update lists" -a
+        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
