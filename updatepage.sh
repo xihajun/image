@@ -1,10 +1,10 @@
 #!/bin/bash
-for i in figures/*/*.svg
+for i in img/*.svg
 do
   echo "!["$i"]""("$i")" >> body.txt
 done
 
-for i in figures/*/*.pdf
+for i in img/*.png
 do
   echo "!["$i"]""("$i")" >> body.txt
 done
