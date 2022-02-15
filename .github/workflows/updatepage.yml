@@ -5,7 +5,8 @@ on:
     paths:
       - .github/workflows/updatepage.yml
       - updatepage.sh
-#       - img/*
+      - header.txt
+#       - img/* 
       
 jobs:
   build:
