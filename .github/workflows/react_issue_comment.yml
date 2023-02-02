@@ -3,7 +3,7 @@ on:
     types: [created]
 jobs:
   commentCreated:
-    runs-on: ubuntu-latest
+    runs-on: chai
     steps:
       - name: Add reaction
         uses: peter-evans/create-or-update-comment@v2
