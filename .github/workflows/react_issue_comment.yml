@@ -10,3 +10,8 @@ jobs:
         with:
           comment-id: ${{ github.event.comment.id }}
           reactions: eyes
+          
+      - name: Print content
+        env:
+          BODY: ${{ github.event.comment.body }}
+        run: echo "$BODY"
