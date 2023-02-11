@@ -14,7 +14,7 @@ with open("comments-no-quotes.txt", 'r') as f:
     prompts = f.read()
 
 # OpenAI processing
-if model_name = "code-davinci-002":
+if model_name == "code-davinci-002":
   response = openai.Completion.create(
     model=model_name,
     prompt=prompts,
