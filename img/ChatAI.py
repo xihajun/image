@@ -4,7 +4,7 @@ import sys
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-if sys.argv[1] == "AI":
+if sys.argv[1] == "AI-bot":
   model_name = "text-davinci-003"
 elif sys.argv[1] == "Codex":
   model_name = "code-davinci-002"
