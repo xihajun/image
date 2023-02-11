@@ -14,15 +14,27 @@ with open("comments-no-quotes.txt", 'r') as f:
     prompts = f.read()
 
 # OpenAI processing
-response = openai.Completion.create(
-  model=model_name,
-  prompt=prompts, # here is the prompt
-  temperature=0.7,
-  max_tokens=1000,
-  top_p=1,
-  frequency_penalty=0,
-  presence_penalty=0
-)
+if model_name = "code-davinci-002":
+  response = openai.Completion.create(
+    model=model_name,
+    prompt=prompts,
+    temperature=0,
+    max_tokens=1000,
+    top_p=1,
+    frequency_penalty=0,
+    presence_penalty=0,
+    stop=["###"]
+  )
+else:
+  response = openai.Completion.create(
+    model=model_name,
+    prompt=prompts, # here is the prompt
+    temperature=0.7,
+    max_tokens=1000,
+    top_p=1,
+    frequency_penalty=0,
+    presence_penalty=0,
+  )
 
 answer = response["choices"][0]["text"]
 
