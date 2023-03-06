@@ -12,7 +12,7 @@ with open(".github/promptdoc.md", "r") as f:
     prompts += question
 
 # OpenAI processing
-response = openai.Completion.create(
+response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     prompt=prompts,  # here is the prompt
     temperature=0.7,
