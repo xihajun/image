@@ -26,8 +26,8 @@ completion = openai.ChatCompletion.create(
   messages=conversations
 )
 
-anwser = completion.choices[0].message.content
-print(anwser)
+answer = completion.choices[0].message.content
+print(answer)
 
 with open(".github/comment-template.md", 'a') as f:
     f.write(answer)
