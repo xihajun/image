@@ -4,7 +4,12 @@ import sys
 import json
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
-data = json.loads("comments.json")
+
+# load comments
+with open("comments.json", 'r') as data_file:
+    json_data = data_file.read()
+
+data = json.loads(json_data)
 
 # Generate the desired format
 conversations = []
