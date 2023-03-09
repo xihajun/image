@@ -21,7 +21,7 @@ for item in data:
 print(conversations)
 
 # Run gpt3.5
-openai.ChatCompletion.create(
+completion = openai.ChatCompletion.create(
   model="gpt-3.5-turbo",
   messages=conversations
 )
